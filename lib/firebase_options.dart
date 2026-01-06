@@ -2,6 +2,7 @@
 // ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
+import 'package:flutter_dotenv/flutter_dotenv.dart';
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
@@ -41,7 +42,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBR2PWauB7o3YjrdY1owLB0ssGJmGCZdLo',
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:832486590389:web:9abe81c9484b202648fbfc',
     messagingSenderId: '832486590389',
     projectId: 'airbnb-flutter-3405f',
@@ -50,7 +51,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBsQ_fB-wDuZ_WtsHPDQqotRH8iXCdTiPQ',
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:832486590389:android:65713e557d395a3948fbfc',
     messagingSenderId: '832486590389',
     projectId: 'airbnb-flutter-3405f',
@@ -58,7 +59,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDWguvSD1-q4tUcXgPdBRfVIpCwpUL2kto',
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:832486590389:ios:b885d1c7ce37093548fbfc',
     messagingSenderId: '832486590389',
     projectId: 'airbnb-flutter-3405f',
@@ -67,7 +68,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDWguvSD1-q4tUcXgPdBRfVIpCwpUL2kto',
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:832486590389:ios:b885d1c7ce37093548fbfc',
     messagingSenderId: '832486590389',
     projectId: 'airbnb-flutter-3405f',
@@ -76,7 +77,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBR2PWauB7o3YjrdY1owLB0ssGJmGCZdLo',
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:832486590389:web:b5d4bda9752e6c1e48fbfc',
     messagingSenderId: '832486590389',
     projectId: 'airbnb-flutter-3405f',
